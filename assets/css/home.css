@@ -1,0 +1,66 @@
+body, html{
+  padding: 0; margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  background-color: #000000;
+  color: #ffffff;
+}
+#containerPage{
+  margin: 10px; padding: 0;
+  height: 90vh;
+  width: 100%;
+}
+/* navbar */
+#navBar .navbar{
+  background-color: #131313;
+}
+  /* lien navbar */
+  #navBar a:hover{
+    border-bottom: 1px solid #636363;
+
+  }
+  /* lien actif */
+  #navBar .active{
+    font-weight: 600;
+  }
+  #logoNavbar{
+    height: 60%;
+    width: auto;
+  }
+#containerMain{
+  margin: 10px; padding: 0;
+  height: 100%;
+  width: 100%;
+}
+/* image le l'elephant */
+#elephantImg{
+  margin: 0; padding: 0;
+  transform: scale(0.9);
+  max-height: 100%;
+  max-height: 100%;
+  width: auto;
+  display:block;
+}
+#rightPart{
+  height: 100%;
+  vertical-align:middle;
+}
+/* partie haute droite de la page */
+#RightTopPart{
+  height: 50%;
+}
+/* partie basse droite de la page */
+#RightBottomPart{
+  height: 50%;
+}
+  span{
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+/* media queries */
+@media screen and (max-width: 770px) {
+
+}
