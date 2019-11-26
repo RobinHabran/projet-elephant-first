@@ -15,9 +15,8 @@ body, html{
   background-color: #131313;
 }
   /* lien navbar */
-  #navBar a:hover{
+  #navBar li:hover{
     border-bottom: 1px solid #636363;
-
   }
   /* lien actif */
   #navBar .active{
@@ -44,22 +43,77 @@ body, html{
 #rightPart{
   height: 100%;
   vertical-align:middle;
+  text-align: center;
 }
 /* partie haute droite de la page */
 #RightTopPart{
   height: 50%;
 }
+  #RightTopPart #timer{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #RightTopPart .mort{
+    margin-left: 10px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  #RightTopPart #sentens{
+    margin-left: 30px;
+  }
 /* partie basse droite de la page */
 #RightBottomPart{
   height: 50%;
 }
-  span{
+  #RightBottomPart span{
     background-color: #ffffff;
     border: 1px solid #ffffff;
     color: #000000;
     font-weight: 700;
     text-transform: uppercase;
   }
+/* overlay Actualité */
+/* The side navigation menu */
+.overlayLeft {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+  /* The navigation menu links */
+  .overlayLeft a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  /* When you mouse over the navigation links, change their color */
+  .overlayLeft a:hover {
+    color: #f1f1f1;
+  }
+  /* Position and style the close button (top right corner) */
+  .overlayLeft .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+
 /* media queries */
 @media screen and (max-width: 770px) {
 
