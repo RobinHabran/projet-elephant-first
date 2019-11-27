@@ -43,7 +43,7 @@ function refreshStat() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // statistiques du génocide
-    var deadPerYear = 25185;
+    var deadPerYear = 20000;
     var deadPerDay = Math.round(deadPerYear / 365);
     var deadPerHour = Math.round(deadPerDay / 24);
     var deadPerMinute = deadPerDay / 1440 ;
