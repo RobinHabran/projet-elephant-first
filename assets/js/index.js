@@ -26,34 +26,37 @@ document.getElementById('home').addEventListener('click',closeOverlay);
 // fermeture des overlay
 document.getElementById('closebtn').addEventListener('click',closeOverlay);
 
-// date
-var now = new Date().getTime();
-// année actuelle
-var year = new Date().getFullYear();
-// date de départ
-var countDownDate = new Date('Jan 01, '+year+' 00:00:00').getTime();
-// temps entre date départ et aujourd'hui
-var distance = -(countDownDate - now);
-// calcul du temps pour: jours, heures, minutes and secondes
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-// statistiques du génocide
-var deadPerYear = 25185;
-var deadPerDay = Math.round(deadPerYear / 365);
-var deadPerHour = Math.round(deadPerDay / 24);
-var deadPerMinute = deadPerDay / 1440 ;
-// nombre de mort depuis le ...
-var deadPerDayToday = deadPerDay * days;
-document.getElementById('timer').innerHTML = deadPerDayToday + '<span class="mort">morts</span>';
-document.getElementById('sentens').innerHTML = 'depuis le 1er janvier ' + year;
-
+// timer
 function refreshStat() {
-  document.getElementById('timer').innerHTML = deadPerDayToday + Math.trunc(deadPerHour + minutes * deadPerMinute) + '<span class="mort">morts</span>';
-}
-// premier appel du compteur
-//deadRealTime();
-// actualisation toutes les minutes du compteur
+  setInterval(function boucle() {
+    // date
+    var now = new Date().getTime();
+    // année actuelle
+    var year = new Date().getFullYear();
+    // date de départ
+    var countDownDate = new Date('Jan 01, '+year+' 00:00:00').getTime();
+    // temps entre date départ et aujourd'hui
+    var distance = -(countDownDate - now);
+    // calcul du temps pour: jours, heures, minutes and secondes
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // statistiques du génocide
+    var deadPerYear = 25185;
+    var deadPerDay = Math.round(deadPerYear / 365);
+    var deadPerHour = Math.round(deadPerDay / 24);
+    var deadPerMinute = deadPerDay / 1440 ;
+    var deadPerDayToday = deadPerDay * days;
+    var deadEverySecond = (seconds * (2.875/60)/3600);
+    // calcul en temps réel
+    var total = deadPerMinute*minutes + deadPerHour*hours + deadPerDay*days;
+    total += deadEverySecond;
+    // nombre de mort depuis le ...
+    document.getElementById('timer').innerHTML = Math.trunc(total) + '<span class="mort">morts</span>';
+    document.getElementById('sentens').innerHTML = 'depuis le 1er janvier ' + year;
 
-setInterval(refreshStat(),100);
+  },1000);
+};
+
+refreshStat();

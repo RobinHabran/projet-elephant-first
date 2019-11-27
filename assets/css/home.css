@@ -49,8 +49,13 @@ body, html{
 /* partie haute droite de la page */
 #RightTopPart{
   height: 50%;
-  margin-top: 100px;
-  border: 1px solid red;
+  margin-bottom: 20px;
+}
+#RightTopPart h1{
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
   #RightTopPart #timer{
     font-size: 36px;
@@ -61,18 +66,16 @@ body, html{
   #RightTopPart .mort{
     margin-left: 10px;
     font-size: 24px;
-    background-color: #ff0000;
+    background-color: #a31e1e;
     color: #ffffff;
     font-weight: 700;
     margin-bottom: 0;
   }
   #RightTopPart #sentens{
-    margin-left: 30px;
   }
 /* partie basse droite de la page */
 #RightBottomPart{
   height: 50%;
-  border: 1px solid blue;
 }
   #RightBottomPart span{
     background-color: #ffffff;
@@ -95,7 +98,7 @@ body, html{
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
   /* The navigation menu links */
-  #overlay a {
+  #overlay #closebtn {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -104,17 +107,52 @@ body, html{
     transition: 0.3s;
   }
   /* When you mouse over the navigation links, change their color */
-  #overlay a:hover {
+  #overlay #closebtn:hover {
     color: #f1f1f1;
   }
   /* Position and style the close button (top right corner) */
   #overlay #closebtn {
     top: 50px;
     font-size: 36px;
-    margin-left: 95%;
+    margin-left: 80%;
     cursor: pointer;
   }
-    #containtOverlayActuality{
+  #containtOverlayActuality{
+    border-left: 2px solid #ffffff:
+  }
+    #containtOverlayActuality .paragraph{
+    }
+    #containtOverlayActuality H2{
+      padding: 8px 20px 15px 10px;
+      margin-bottom: 20px;
+      border-left: 2px solid #247c8f;
+      border-top: 2px solid #247c8f;
+      border-radius: 2px;
+      background-color: #343434;
+      background-image: linear-gradient(to right, #343434, #111111);
+    }
+    #containtOverlayActuality p{
+      margin-left: 10px;
+    }
+    #containtOverlayActuality p .tabulation{
+      padding-left: 2em;
+    }
+    #containtOverlayActuality .source{
+      padding: 5px 10px;
+      text-decoration: none;
+      border: 2px solid #247c8f;
+      border-radius: 2px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    #containtOverlayActuality .source:hover{
+      box-shadow: 2px 2px 15px #103a44;
+    }
+    #containtOverlayActuality .source:active{
+      box-shadow: 1px 1px 5px #103a44;
+    }
+    #containtOverlayActuality i{
+      color: #ffffff;
     }
 
 /* media queries */
@@ -123,6 +161,6 @@ body, html{
     margin-left: 75%;
   }
   #RightTopPart{
-    height: 20%;
+    height: 30%;
   }
 }
