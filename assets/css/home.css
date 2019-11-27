@@ -1,6 +1,7 @@
 body, html{
   padding: 0; margin: 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   overflow-x: hidden;
   background-color: #000000;
   color: #ffffff;
@@ -48,16 +49,18 @@ body, html{
 /* partie haute droite de la page */
 #RightTopPart{
   height: 50%;
+  margin-top: 100px;
+  border: 1px solid red;
 }
   #RightTopPart #timer{
-    font-size: 22px;
+    font-size: 36px;
     font-weight: 600;
     padding: 0;
     margin-bottom: 0;
   }
   #RightTopPart .mort{
     margin-left: 10px;
-    font-size: 16px;
+    font-size: 24px;
     background-color: #ff0000;
     color: #ffffff;
     font-weight: 700;
@@ -69,17 +72,17 @@ body, html{
 /* partie basse droite de la page */
 #RightBottomPart{
   height: 50%;
+  border: 1px solid blue;
 }
   #RightBottomPart span{
     background-color: #ffffff;
-    border: 1px solid #ffffff;
     color: #000000;
     font-weight: 700;
     text-transform: uppercase;
   }
 /* overlay Actualité */
 /* The side navigation menu */
-.overlayLeft {
+#overlay {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -92,7 +95,7 @@ body, html{
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
   /* The navigation menu links */
-  .overlayLeft a {
+  #overlay a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -101,24 +104,25 @@ body, html{
     transition: 0.3s;
   }
   /* When you mouse over the navigation links, change their color */
-  .overlayLeft a:hover {
+  #overlay a:hover {
     color: #f1f1f1;
   }
   /* Position and style the close button (top right corner) */
-  .overlayLeft #closebtn {
-    position: absolute;
+  #overlay #closebtn {
     top: 50px;
-    right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-left: 95%;
     cursor: pointer;
   }
     #containtOverlayActuality{
-      border: 1px solid red;
-      width: 80%;
     }
 
 /* media queries */
 @media screen and (max-width: 770px) {
-
+  #overlay #closebtn {
+    margin-left: 75%;
+  }
+  #RightTopPart{
+    height: 20%;
+  }
 }

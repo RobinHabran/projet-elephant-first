@@ -14,7 +14,7 @@
         <title>Elephant first</title>
   </head>
   <body>
-    <div class="row no-gutters container-fluid border border-danger" id="containerPage">
+    <div class="row no-gutters container-fluid" id="containerPage">
       <div class="row d-flex justify-content-end" id="navBar">
         <!-- navbar = navigation bar; navbar-expand-sm = become vertical list under sm size; bg-dark=background in color black; justify-content-center=centering text -->
         <nav class="navbar col-md-12 navbar-expand-sm navbar-dark justify-content-right fixed-top">
@@ -26,6 +26,7 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end " id="myCollapsNavbar">
             <ul class="navbar-nav">
+              <li class="nav-item ml-2 mr-2"><a class="nav-link active" href="#" id="home">Accueil</a></li>
               <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#" id="actuality">Actualité</a></li>
               <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#" id="stat">Statistiques</a></li>
               <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#" id="association">Associations</a></li>
@@ -33,18 +34,18 @@
           </div>
         </nav>
       </div>
-      <div class="row col-12 no-gutters container-fluid border border-light" id="containerMain">
-        <img class="col-sm-6 offset-md-1 img-fluid border border-info " src="assets/img/elephant-1-sm.png" alt="elephant" width="840" height="914" id="elephantImg">
-        <div class=" col-md-5 border px-sm-3 py-sm-2" id="rightPart">
+      <div class="row col-12 no-gutters container-fluid" id="containerMain">
+        <img class="col-sm-6 offset-md-1 img-fluid" src="assets/img/elephant-1-sm.png" alt="elephant" width="840" height="914" id="elephantImg">
+        <div class=" col-md-5 px-sm-3 py-sm-2" id="rightPart">
           <div class="row pt-md-5" id="RightTopPart">
-            <div class="col-10 offset-1 col-md-8 offset-md-2 pt-md-5 border border-success">
+            <div class="col-10 offset-1 col-md-8 offset-md-2 pt-md-5">
               <p id="timer"></p>
               <p id="sentens"></p>
             </div>
           </div>
           <!-- résoudre le problème du dépassement de div -->
           <div class="row pb-md-2" id="RightBottomPart">
-            <div class="col-10 offset-1 col-md-8 offset-md-2 border border-warning">
+            <div class="col-10 offset-1 col-md-8 offset-md-2">
               <!-- coder le saut de ligne uniquement en dessous de md-->
               <p>
                 Chaque année entre 20 000 et 30 000 éléphants sont tués
@@ -58,14 +59,19 @@
         </div>
       </div>
     </div>
-    <div id="overlayActuality" class="overlayLeft">
-      <div id="containtOverlayActuality">
-        <a id="closebtn">&times;</a>
-        <p>La population des éléphants d'Afrique a décliné de 70% en 40 ans, écrit le WWF dans un communiqué mardi. L'organisation non gouvernementale vouée à la protection de l'environnement précise qu'un éléphant meurt toutes les 25 minutes, tué pour ses défenses en ivoire, et qu'à ce rythme, l'espèce sera éteinte dans 20 ans. Le WWF lance une campagne de récolte de fonds pour lutter contre le braconnage et protéger son habitat.</p>
-        <p>Selon le WWF, il y a urgence, car l'éléphant d'Afrique risque de disparaître en 2040 si aucune action n'est entreprise rapidement. Chaque année, ce sont près de 20.000 éléphants qui sont tués pour alimenter le commerce illégal de l'ivoire. En raison de sa position géographique centrale et de son histoire coloniale, la Belgique est une plaque tournante du trafic illégal de l'ivoire.</p>
-        <p>Entre 2007 et 2016, les douaniers belges ont saisi 3.616 produits dérivés de l'ivoire, précise le WWF. La plupart d'entre eux transitent par Brussels Airport et sont destinés à la Chine. Le WWF explique que derrière les braconniers se cachent de puissants réseaux criminels organisés. Chaque année, une centaine de rangers perdent la vie sous les balles des braconniers.</p>
-        <p>Le trafic des espèces sauvages est l'un des plus importants trafics criminels du monde derrière le trafic de drogue, le trafic des êtres humains et la contrefaçon. Il pèse plus de 150 milliards de dollars (plus de 135 milliards d'euros) par an. Le WWF lance ce mardi une campagne de récolte de fonds pour financer des mesures contre le braconnage. L'organisation a créé la page www.elephant.wwf.be pour récolter les dons. </p>
-        <p>Source: RTL - Belgique / WorldWildLife</p>
+    <div id="overlay">
+      <div id="overlayActuality" class="overlay">
+        <div id="containtOverlayActuality" class="offset-1 offset-md-2 col-10 col-md-8">
+
+          <div class="row"><a id="closebtn">&times;</a></div>
+          <div class="row">
+            <p>La population des éléphants d'Afrique a décliné de 70% en 40 ans, écrit le WWF dans un communiqué mardi. L'organisation non gouvernementale vouée à la protection de l'environnement précise qu'un éléphant meurt toutes les 25 minutes, tué pour ses défenses en ivoire, et qu'à ce rythme, l'espèce sera éteinte dans 20 ans. Le WWF lance une campagne de récolte de fonds pour lutter contre le braconnage et protéger son habitat.</p>
+            <p>Selon le WWF, il y a urgence, car l'éléphant d'Afrique risque de disparaître en 2040 si aucune action n'est entreprise rapidement. Chaque année, ce sont près de 20.000 éléphants qui sont tués pour alimenter le commerce illégal de l'ivoire. En raison de sa position géographique centrale et de son histoire coloniale, la Belgique est une plaque tournante du trafic illégal de l'ivoire.</p>
+            <p>Entre 2007 et 2016, les douaniers belges ont saisi 3.616 produits dérivés de l'ivoire, précise le WWF. La plupart d'entre eux transitent par Brussels Airport et sont destinés à la Chine. Le WWF explique que derrière les braconniers se cachent de puissants réseaux criminels organisés. Chaque année, une centaine de rangers perdent la vie sous les balles des braconniers.</p>
+            <p>Le trafic des espèces sauvages est l'un des plus importants trafics criminels du monde derrière le trafic de drogue, le trafic des êtres humains et la contrefaçon. Il pèse plus de 150 milliards de dollars (plus de 135 milliards d'euros) par an. Le WWF lance ce mardi une campagne de récolte de fonds pour financer des mesures contre le braconnage. L'organisation a créé la page www.elephant.wwf.be pour récolter les dons. </p>
+            <p>Source: RTL - Belgique / WorldWildLife</p>
+          </div>
+        </div>
       </div>
     </div>
 
