@@ -3,6 +3,7 @@ $(function() {
   $(document).click(function (event) {
     $('.navbar-collapse').collapse('hide');
   });
+  $('[data-toggle="tooltip"]').tooltip();
 });
 // ouverture de l'overlay au click sur la categorie
 function openOverlay(){
@@ -59,4 +60,7 @@ function refreshStat() {
   },1000);
 };
 
-refreshStat();
+// appels
+  // timer every 1 minute
+  refreshStat();
+  // tool tip:

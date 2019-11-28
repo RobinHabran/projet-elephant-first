@@ -13,7 +13,8 @@ body, html{
 }
 /* navbar */
 #navBar .navbar{
-  background-color: #131313;
+  /*background-color: #131313;*/
+  background-color: transparent;
 }
   /* lien navbar */
   #navBar li:hover{
@@ -73,7 +74,19 @@ body, html{
   }
   #RightTopPart #sentens{
   }
-  
+  /* Tooltip */
+  #RightTopPart .test + .tooltip > .tooltip-inner {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #a31e1e;
+    padding: 15px;
+    font-size: 20px;
+  }
+  /* Tooltip au dessus */
+  #RightTopPart .test + .tooltip.top > .tooltip-arrow {
+    border-top: 5px solid #a31e1e;
+  }
+
 /* partie basse droite de la page */
 #RightBottomPart{
   height: 50%;
