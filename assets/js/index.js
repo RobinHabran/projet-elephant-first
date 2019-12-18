@@ -6,26 +6,27 @@ $(function() {
   $('[data-toggle="tooltip"]').tooltip();
 });
 // ouverture de l'overlay au click sur la categorie
-function openOverlay(){
+function openOverlay(objet){
   // fermeture d'un ouverlay si ouvert
-  document.getElementById('overlay').style.width = '0%';
-  document.getElementById('overlay').style.width = '100%';
-  //document.getElementsByTagName('A').classList.remove('active');
-  document.getElementById('home').classList.remove('active');
-  document.getElementById('actuality').classList.add('active');
+  console.log(objet);
+  objet.style.width = '0%';
+  objet.style.width = '100%';
+  //document.getElementById('myCollapsNavbar').getElementsByTagName('a').classList.remove('active');
+  objet.classList.add('active');
 }
 // fermeture de l'overlay au click
 function closeOverlay(){
   document.getElementById('overlay').style.width = '0%';
   document.getElementById('actuality').classList.remove('active');
+  //document.getElementById('statistic').classList.remove('active');
+  //document.getElementById('organisation').classList.remove('active');
   document.getElementById('home').classList.add('active');
 }
-// ouverture de la categorie 'actuality'
-document.getElementById('actuality').addEventListener('click',openOverlay);
-// retour à la categorie 'home'
-document.getElementById('home').addEventListener('click',closeOverlay);
-// fermeture des overlay
-document.getElementById('closebtn').addEventListener('click',closeOverlay);
+
+function openOneCloseAll(id){
+  closeOverlay();
+  closeOverlay(id);
+}
 
 // timer
 function refreshStat() {
@@ -57,10 +58,16 @@ function refreshStat() {
     document.getElementById('timer').innerHTML = Math.trunc(total) + '<span class="mort">morts</span>';
     document.getElementById('sentens').innerHTML = 'depuis le 1er janvier ' + year;
 
+    // timer every 1 minute
   },1000);
 };
 
 // appels
-  // timer every 1 minute
+  // ouverture de la categorie 'actuality'
+  document.getElementById('actuality').addEventListener('click',openOverlay(document.getElementById('actuality')));
+  // retour à la categorie 'home'
+  document.getElementById('home').addEventListener('click',closeOverlay());
+  // fermeture des overlay
+  document.getElementById('closebtn').addEventListener('click',closeOverlay());
+  // appel du 'compteur
   refreshStat();
-  // tool tip:

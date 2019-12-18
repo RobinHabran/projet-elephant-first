@@ -5,6 +5,11 @@ body, html{
   overflow-x: hidden;
   background-color: #000000;
   color: #ffffff;
+  height: 100%;
+  min-height: 100%;
+}
+h1, p{
+  cursor: default;
 }
 #containerPage{
   margin: 10px; padding: 0;
@@ -63,6 +68,7 @@ body, html{
     font-weight: 600;
     padding: 0;
     margin-bottom: 0;
+    cursor: default;
   }
   #RightTopPart .mort{
     margin-left: 10px;
@@ -70,7 +76,6 @@ body, html{
     background-color: #a31e1e;
     color: #ffffff;
     font-weight: 700;
-    margin-bottom: 0;
   }
   #RightTopPart #sentens{
   }
@@ -98,13 +103,13 @@ body, html{
     text-transform: uppercase;
   }
 /* overlay Actualité */
-/* The side navigation menu */
 #overlay {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
