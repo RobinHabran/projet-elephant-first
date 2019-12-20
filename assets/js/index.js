@@ -6,18 +6,18 @@ $(function() {
   $('[data-toggle="tooltip"]').tooltip();
 });
 // ouverture de l'overlay au click sur la categorie
-function openOverlay(objet){
+function openOverlay(id){
+  console.log('test 1');
   // fermeture d'un ouverlay si ouvert
-  console.log(objet);
-  objet.style.width = '0%';
-  objet.style.width = '100%';
+  //id.style.width = '0%';
+  id.style.left = '0';
   //document.getElementById('myCollapsNavbar').getElementsByTagName('a').classList.remove('active');
-  objet.classList.add('active');
+  id.classList.add('active');
 }
 // fermeture de l'overlay au click
 function closeOverlay(){
-  document.getElementById('overlay').style.width = '0%';
-  document.getElementById('actuality').classList.remove('active');
+  document.getElementById('overlayActuality').style.left = '0';
+  document.getElementById('overlayActuality').classList.remove('active');
   //document.getElementById('statistic').classList.remove('active');
   //document.getElementById('organisation').classList.remove('active');
   document.getElementById('home').classList.add('active');
@@ -44,6 +44,7 @@ function refreshStat() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
     // statistiques du génocide
     var deadPerYear = 20000;
     var deadPerDay = Math.round(deadPerYear / 365);
@@ -52,8 +53,7 @@ function refreshStat() {
     var deadPerDayToday = deadPerDay * days;
     var deadEverySecond = (seconds * (2.875/60)/3600);
     // calcul en temps réel
-    var total = deadPerMinute*minutes + deadPerHour*hours + deadPerDay*days;
-    total += deadEverySecond;
+    var total = deadPerMinute*minutes + deadPerHour*hours + deadPerDay*days + deadEverySecond;
     // nombre de mort depuis le ...
     document.getElementById('timer').innerHTML = Math.trunc(total) + '<span class="mort">morts</span>';
     document.getElementById('sentens').innerHTML = 'depuis le 1er janvier ' + year;
@@ -64,10 +64,10 @@ function refreshStat() {
 
 // appels
   // ouverture de la categorie 'actuality'
-  document.getElementById('actuality').addEventListener('click',openOverlay(document.getElementById('actuality')));
+  document.getElementById('overlayActuality').addEventListener('click',openOverlay(document.getElementById('overlayActuality')));
   // retour à la categorie 'home'
-  document.getElementById('home').addEventListener('click',closeOverlay());
+  //document.getElementById('home').addEventListener('click',closeOverlay());
   // fermeture des overlay
-  document.getElementById('closebtn').addEventListener('click',closeOverlay());
+  //document.getElementById('closebtn').addEventListener('click',closeOverlay());
   // appel du 'compteur
   refreshStat();

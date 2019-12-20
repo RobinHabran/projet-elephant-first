@@ -18,8 +18,8 @@ h1, p{
 }
 /* navbar */
 #navBar .navbar{
-  /*background-color: #131313;*/
-  background-color: transparent;
+  background-color: #131313;
+  /*background-color: transparent;*/
 }
   /* lien navbar */
   #navBar li:hover{
@@ -103,21 +103,21 @@ h1, p{
     text-transform: uppercase;
   }
 /* overlay Actualité */
-#overlay {
+#overlayActuality {
   height: 100%;
-  width: 0;
+  width: 100%;
   display: block;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: -100vw;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
   /* The navigation menu links */
-  #overlay #closebtn {
+  #overlayActuality #closebtn {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -126,11 +126,11 @@ h1, p{
     transition: 0.3s;
   }
   /* When you mouse over the navigation links, change their color */
-  #overlay #closebtn:hover {
+  #overlayActuality #closebtn:hover {
     color: #f1f1f1;
   }
   /* Position and style the close button (top right corner) */
-  #overlay #closebtn {
+  #overlayActuality #closebtn {
     top: 50px;
     font-size: 36px;
     margin-left: 80%;
