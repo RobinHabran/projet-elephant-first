@@ -7,13 +7,12 @@ $(function() {
 });
 // ouverture de l'overlay au click sur la categorie
 function openOverlay(id){
-  console.log('test 1');
   // fermeture d'un ouverlay si ouvert
   //id.style.width = '0%';
   id.style.left = '0';
   //document.getElementById('myCollapsNavbar').getElementsByTagName('a').classList.remove('active');
   id.classList.add('active');
-}
+};
 // fermeture de l'overlay au click
 function closeOverlay(){
   document.getElementById('overlayActuality').style.left = '0';
@@ -21,12 +20,12 @@ function closeOverlay(){
   //document.getElementById('statistic').classList.remove('active');
   //document.getElementById('organisation').classList.remove('active');
   document.getElementById('home').classList.add('active');
-}
+};
 
 function openOneCloseAll(id){
   closeOverlay();
   closeOverlay(id);
-}
+};
 
 // timer
 function refreshStat() {
@@ -64,7 +63,7 @@ function refreshStat() {
 
 // appels
   // ouverture de la categorie 'actuality'
-  document.getElementById('overlayActuality').addEventListener('click',openOverlay(document.getElementById('overlayActuality')));
+  document.getElementById('actuality').addEventListener('click',openOverlay(document.getElementById('overlayActuality')));
   // retour à la categorie 'home'
   //document.getElementById('home').addEventListener('click',closeOverlay());
   // fermeture des overlay
