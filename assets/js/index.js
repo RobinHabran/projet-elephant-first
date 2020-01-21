@@ -65,8 +65,8 @@ function refreshStat() {
   // ouverture de la categorie 'actuality'
   document.getElementById('actuality').addEventListener('click',openOverlay(document.getElementById('overlayActuality')));
   // retour à la categorie 'home'
-  //document.getElementById('home').addEventListener('click',closeOverlay());
+  //document.getElementById('home').addEventListener('click',closeOverlay);
   // fermeture des overlay
-  //document.getElementById('closebtn').addEventListener('click',closeOverlay());
+  //document.getElementById('closebtn').addEventListener('click',closeOverlay);
   // appel du 'compteur
   refreshStat();
